@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#100b24">
+  <meta name="description" content="An interactive presentation about how artificial intelligence helps us in everyday life.">
+  <title>AI in Our Daily Life — Interactive Presentation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <div class="noise"></div>
+  <div class="particle-field" id="particleField" aria-hidden="true"></div>
+
+  <main>
+    <section class="welcome-screen screen active" id="welcomeScreen" aria-label="Welcome">
+      <div class="welcome-top"><span class="brand-mark"><span class="brand-dot"></span> DIGITAL MINDS</span><span class="top-label">AN INTERACTIVE TALK</span></div>
+      <div class="welcome-content">
+        <div class="hero-orb-wrap" aria-hidden="true">
+          <div class="hero-orb"><div class="orb-core"></div><i></i><b></b><span></span></div>
+          <div class="orb-ring ring-one"></div><div class="orb-ring ring-two"></div><div class="orb-ring ring-three"></div>
+          <div class="orb-spark spark-one"></div><div class="orb-spark spark-two"></div><div class="orb-spark spark-three"></div>
+        </div>
+        <p class="eyebrow"><span class="eyebrow-line"></span> A LITTLE LOOK INTO OUR FUTURE</p>
+        <h1>AI in Our<br><span>Daily Life.</span></h1>
+        <p class="welcome-subtitle">How AI helps us in simple ways</p>
+        <button class="start-button" id="startButton">
+          <span>Start presentation</span><span class="button-arrow">↗</span>
+        </button>
+        <p class="welcome-hint">A short journey through the technology around us</p>
+      </div>
+      <div class="welcome-bottom"><span>01 — 08</span><span>SCROLL LESS. DISCOVER MORE.</span><span>2026</span></div>
+    </section>
+
+    <section class="loading-screen screen" id="loadingScreen" aria-live="polite">
+      <div class="loader-orb"><span></span><i></i><b></b></div>
+      <p class="loading-kicker">PREPARING YOUR EXPERIENCE</p>
+      <h2 id="loadingText">Waking up the possibilities...</h2>
+      <div class="loader-track"><div class="loader-progress" id="loaderProgress"></div></div>
+      <p class="loading-percent" id="loadingPercent">0%</p>
+    </section>
+
+    <section class="presentation-screen screen" id="presentationScreen" aria-label="Presentation">
+      <header class="presentation-header">
+        <a class="mini-brand" href="#" aria-label="Presentation home"><span class="brand-dot"></span> AI / DAILY LIFE</a>
+        <div class="header-center"><span class="live-dot"></span><span>INTERACTIVE PRESENTATION</span></div>
+        <div class="header-actions">
+          <button class="icon-button" id="notesButton" aria-label="Toggle speaker notes" title="Speaker notes (N)">▤</button>
+          <button class="icon-button" id="soundButton" aria-label="Toggle sound" title="Sound on/off (M)">♫</button>
+          <button class="icon-button" id="fullscreenButton" aria-label="Toggle fullscreen" title="Fullscreen (F)">⛶</button>
+        </div>
+      </header>
+
+      <div class="slide-stage">
+        <div class="slide-counter"><span id="currentNumber">01</span><span class="counter-divider">/</span><span>08</span></div>
+
+        <article class="slide active" data-slide="0" data-title="A little look into our future">
+          <div class="slide-grid opening-grid">
+            <div class="slide-copy">
+              <p class="eyebrow"><span class="eyebrow-line"></span> LET'S EXPLORE</p>
+              <h2 class="display-title">AI in Our<br><span>Daily Life.</span></h2>
+              <p class="lead">How AI helps us in simple ways</p>
+              <div class="welcome-chip"><span class="chip-spark">✦</span> Small technology. Big impact.</div>
+            </div>
+            <div class="visual visual-orbit" aria-hidden="true">
+              <div class="orbit-planet planet-main"><span>AI</span></div>
+              <div class="orbit-path path-a"></div><div class="orbit-path path-b"></div>
+              <div class="orbit-planet planet-a">✦</div><div class="orbit-planet planet-b">⌘</div><div class="orbit-planet planet-c">◎</div>
+              <div class="orbit-glow"></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="slide" data-slide="1" data-title="Have you ever experienced this?">
+          <div class="slide-grid question-grid">
+            <div class="slide-copy">
+              <p class="eyebrow"><span class="eyebrow-line"></span> QUICK QUESTION</p>
+              <h2 class="display-title">Just one video…<br><span>one whole hour?</span></h2>
+              <p class="lead">You open an app for a minute. Suddenly, time flies.</p>
+              <div class="callout"><span class="callout-icon">?</span><span>Have you ever done this?</span></div>
+            </div>
+            <div class="visual phone-visual" aria-hidden="true">
+              <div class="phone-shell">
+                <div class="phone-notch"></div>
+                <div class="phone-screen">
+                  <div class="phone-top"><span>For You</span><span>⌕　♡</span></div>
+                  <div class="video-card video-one"><span class="play">▶</span><small>FUNNY MOMENTS</small></div>
+                  <div class="video-card video-two"><span class="play">▶</span><small>DAILY DISCOVERY</small></div>
+                  <div class="phone-nav"><span>⌂</span><span>⌕</span><span>＋</span><span>♡</span><span>◉</span></div>
+                </div>
+              </div>
+              <div class="time-bubble"><span>⏱</span><strong>1 hour</strong><small>Where did the time go?</small></div>
+              <div class="float-heart">♥</div><div class="float-star">✦</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="slide" data-slide="2" data-title="What is AI?">
+          <div class="slide-grid definition-grid">
+            <div class="slide-copy">
+              <p class="eyebrow"><span class="eyebrow-line"></span> THE BIG IDEA</p>
+              <h2 class="display-title">So, what<br><span>is AI?</span></h2>
+              <p class="lead">AI stands for <strong>Artificial Intelligence.</strong></p>
+              <p class="body-copy">Technology that helps computers do tasks that usually need human intelligence.</p>
+              <div class="mini-points"><span>Learn</span><span>Answer</span><span>Recognize patterns</span></div>
+            </div>
+            <div class="visual brain-visual" aria-hidden="true">
+              <div class="brain-halo"></div>
+              <div class="brain-core">✧</div>
+              <svg class="brain-lines" viewBox="0 0 420 420" fill="none">
+                <path d="M210 48 L92 125 L74 258 L168 348 L280 328 L350 220 L318 102 Z M92 125 L210 210 L318 102 M74 258 L210 210 L280 328 M168 348 L210 210 L350 220 M210 48 L210 210" />
+                <circle cx="210" cy="48" r="7"/><circle cx="92" cy="125" r="6"/><circle cx="74" cy="258" r="7"/><circle cx="168" cy="348" r="6"/><circle cx="280" cy="328" r="7"/><circle cx="350" cy="220" r="6"/><circle cx="318" cy="102" r="7"/><circle cx="210" cy="210" r="10"/>
+              </svg>
+              <div class="brain-label label-learn">LEARNING</div><div class="brain-label label-data">DATA</div><div class="brain-label label-insight">INSIGHT</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="slide" data-slide="3" data-title="Where can we find AI?">
+          <div class="slide-heading">
+            <p class="eyebrow"><span class="eyebrow-line"></span> CLOSER THAN YOU THINK</p>
+            <h2 class="display-title compact-title">AI is already</h2>
+            <h2 class="display-title compact-title"><span>around us.</span></h2>
+            <p class="lead">Sometimes, we use it without even realizing it.</p>
+          </div>
+          <div class="app-cards">
+            <div class="app-card tiktok-card"><div class="app-icon music-icon">♪</div><div class="app-card-label">01 / SOCIAL</div><h3>Video<br>recommen <br>dations</h3><p>Finds videos you may like.</p><div class="card-orbit"></div></div>
+            <div class="app-card maps-card"><div class="app-icon map-icon">↗</div><div class="app-card-label">02 / NAVIGATION</div><h3>Smart<br>directions</h3><p>Helps find the best route.</p><div class="map-path"></div></div>
+            <div class="app-card shop-card"><div class="app-icon shop-icon">◇</div><div class="app-card-label">03 / SHOPPING</div><h3>Product<br>suggestions</h3><p>Recommends things you may want.</p><div class="shop-spark">✦</div></div>
+            <div class="bottom-note"><span class="note-dot"></span> AI is not just in the future. It's already here.</div>
+          </div>
+        </article>
+
+        <article class="slide" data-slide="4" data-title="How do I use AI?">
+          <div class="slide-grid experience-grid">
+            <div class="slide-copy">
+              <p class="eyebrow"><span class="eyebrow-line"></span> MY EXPERIENCE</p>
+              <h2 class="display-title">How do <span>I use AI?</span></h2>
+              <p class="lead">As an IT graduate, AI is part of my learning process.</p>
+              <p class="body-copy">For me, AI is like a personal assistant — helping me save time and understand new things.</p>
+            </div>
+            <div class="visual work-visual" aria-hidden="true">
+              <div class="work-window">
+                <div class="window-top"><span></span><span></span><span></span><b>my-workspace.ai</b></div>
+                <div class="code-lines"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                <div class="data-mini"><div class="data-bars"><i></i><i></i><i></i><i></i><i></i></div><span>DATA / INSIGHTS</span></div>
+              </div>
+              <div class="tool-tag tag-code">⌘ <span>Programming</span></div>
+              <div class="tool-tag tag-web">◫ <span>Websites</span></div>
+              <div class="tool-tag tag-data">▥ <span>Data</span></div>
+              <div class="tool-tag tag-doc">▤ <span>Documents</span></div>
+              <div class="assistant-bubble"><span>✦</span> How can I help?</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="slide" data-slide="5" data-title="Is AI always good?">
+          <div class="slide-heading">
+            <p class="eyebrow"><span class="eyebrow-line"></span> A BALANCED VIEW</p>
+            <h2 class="display-title compact-title">Is AI always</h2>
+            <h2 class="display-title compact-title"><span>good?</span></h2>
+            <p class="lead">Of course, not! Every powerful tool needs responsible use.</p>
+          </div>
+          <div class="balance-cards">
+            <div class="balance-card good-card"><div class="balance-icon">✦</div><div class="balance-label">THE GOOD SIDE</div><h3>AI can help us</h3><ul><li>Save time</li><li>Learn new things</li><li>Find useful information</li></ul><div class="balance-decoration">+</div></div>
+            <div class="balance-card risk-card"><div class="balance-icon">!</div><div class="balance-label">THE RISK SIDE</div><h3>But AI can also</h3><ul><li>Give wrong information</li><li>Make us depend on it</li><li>Reduce independent thinking</li></ul><div class="balance-decoration">−</div></div>
+          </div>
+          <div class="bottom-note"><span class="note-dot"></span> Don't believe everything AI says. Always think and check.</div>
+        </article>
+
+        <article class="slide" data-slide="6" data-title="What about the future?">
+          <div class="slide-grid future-grid">
+            <div class="slide-copy">
+              <p class="eyebrow"><span class="eyebrow-line"></span> WHAT'S NEXT?</p>
+              <h2 class="display-title">Meet the <span>AI Agent.</span></h2>
+              <p class="lead">A system that can help us complete tasks automatically.</p>
+              <div class="future-list"><span><b>01</b> Organize information</span><span><b>02</b> Analyze data</span><span><b>03</b> Track daily expenses</span></div>
+            </div>
+            <div class="visual agent-visual" aria-hidden="true">
+              <div class="agent-core"><div class="agent-eye"></div><span>AGENT</span></div>
+              <div class="agent-ring agent-ring-one"></div><div class="agent-ring agent-ring-two"></div>
+              <div class="agent-node node-top">▤<small>ORGANIZE</small></div>
+              <div class="agent-node node-right">▥<small>ANALYZE</small></div>
+              <div class="agent-node node-bottom">◷<small>TRACK</small></div>
+              <div class="agent-node node-left">✧<small>AUTOMATE</small></div>
+              <svg class="agent-connectors" viewBox="0 0 440 440"><path d="M220 220 L220 45 M220 220 L395 220 M220 220 L220 395 M220 220 L45 220"/></svg>
+            </div>
+          </div>
+        </article>
+
+        <article class="slide" data-slide="7" data-title="Don't let AI do all your thinking">
+          <div class="closing-content">
+            <div class="closing-orb" aria-hidden="true"><span>✦</span></div>
+            <p class="eyebrow"><span class="eyebrow-line"></span> ONE LAST THOUGHT</p>
+            <h2 class="closing-title">Don't let AI<br>do all your <span>thinking.</span></h2>
+            <p class="closing-subtitle">Use AI wisely. Keep learning. Keep thinking.</p>
+            <div class="thank-you">THANK YOU FOR LISTENING <span>✦</span></div>
+            <button class="restart-button" id="restartButton">↻ &nbsp; Replay presentation</button>
+          </div>
+        </article>
+
+        <aside class="speaker-notes" id="speakerNotes" aria-label="Speaker notes">
+          <div class="notes-head"><div><span class="notes-kicker">PRESENTER MODE</span><h3>Speaker notes</h3></div><button class="close-notes" id="closeNotes" aria-label="Close notes">×</button></div>
+          <p class="notes-slide-title" id="notesSlideTitle">Opening</p>
+          <div class="notes-content" id="notesContent"></div>
+          <div class="notes-tip">Only you can see these notes. They won't appear in the audience view.</div>
+        </aside>
+      </div>
+
+      <footer class="presentation-footer">
+        <div class="footer-left"><span class="progress-label">YOUR JOURNEY</span><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div></div>
+        <div class="footer-center"><button class="nav-button" id="prevButton" aria-label="Previous slide">←</button><span class="nav-hint">USE ← → TO NAVIGATE</span><button class="nav-button next-button" id="nextButton" aria-label="Next slide">→</button></div>
+        <div class="footer-right"><span id="footerSlide">01 / 08</span><button class="overview-button" id="overviewButton" title="Slide overview">▦</button></div>
+      </footer>
+      <div class="overview-overlay" id="overviewOverlay">
+        <div class="overview-panel"><div class="overview-head"><div><span class="notes-kicker">JUMP TO A MOMENT</span><h3>Slide overview</h3></div><button class="close-notes" id="closeOverview">×</button></div><div class="overview-grid" id="overviewGrid"></div></div>
+      </div>
+    </section>
+  </main>
+  <script src="js/presentation.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
